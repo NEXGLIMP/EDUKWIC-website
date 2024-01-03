@@ -1,0 +1,176 @@
+:root{
+  --color-primary: #540d66;
+  --color-primary-rgb: 249, 114, 51;
+  --color-secondary: #485664;
+  --color-white: #ffffff;
+  --color-white-rgb: 72, 86, 100;
+  --color-secondary-rgb: #ffff;
+  --color-primary-rgb: #ce0d0d;
+}
+.font-secondary { font-family: var(--font-secondary) !important; }
+
+/*=================  
+	home page
+====================*/
+.hero-fullscreen {
+  width: 100%;
+  min-height: 115vh;
+  background: url("../images/background/edukwick-banner.png") center center;
+  background-size: cover;
+  position: relative;
+}
+
+.hero-fullscreen:before {
+  content: "";
+  background: rgba(23, 23, 24, 0.90);
+  position: absolute;
+  inset: 0;
+}
+
+@media (min-width: 1365px) {
+  .hero-fullscreen {
+    background-attachment: fixed;
+  }
+}
+@media (max-width: 760px) {
+  .hero-fullscreen {
+    min-height: 55vh;
+  }
+  .herotext {
+    padding-top: 50px;
+  }
+}
+
+.hero-fullscreen h2 {
+  margin: 0 0 10px 0;
+  color: #ffffff;
+  font-family: var(--font-secondary);
+}
+
+.hero-fullscreen h2 span {
+  color: #540d66;
+}
+.hero-text{
+  font-weight: 400;
+}
+
+.hero-fullscreen p {
+  color: rgba(255,255,255, 0.8);
+  margin: 0 0 30px 0;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.hero-fullscreen .btn-get-started {
+  font-size: 16px;
+  font-weight: 400;
+  display: inline-block;
+  padding: 10px 28px;
+  border-radius: 4px;
+  transition: 0.5s;
+  color: #ffffff;
+  background: #540d66;
+  font-family: #fff;
+}
+
+.hero-fullscreen .btn-get-started:hover {
+  background: rgba(var(--color-primary-rgb), 0.8);
+}
+
+.hero-fullscreen .btn-watch-video {
+  font-size: 16px;
+  transition: 0.5s;
+  margin-left: 25px;
+  font-family: var(--font-secondary);
+  color: var(--color-secondary);
+  font-weight: 600;
+}
+
+.hero-fullscreen .btn-watch-video i {
+  color: var(--color-primary);
+  font-size: 32px;
+  transition: 0.3s;
+  line-height: 0;
+  margin-right: 8px;
+}
+
+.hero-fullscreen .btn-watch-video:hover {
+  color: var(--color-primary);
+}
+
+.hero-fullscreen .btn-watch-video:hover i {
+  color: rgba(var(--color-primary-rgb), 0.8);
+}
+
+@media (max-width: 640px) {
+  .hero-fullscreen h2 {
+    font-size: 38px;
+  }
+
+  .hero-fullscreen p {
+    font-size: 15px;
+    margin-bottom: 30px;
+  }
+
+  .hero-fullscreen .btn-get-started,
+  .hero-fullscreen .btn-watch-video {
+    font-size: 14px;
+  }
+}
+/*=================  
+	certificate list
+====================*/
+.list-type5{
+  width:410px;
+  margin:0 auto;
+  }
+.list-type5 ol {
+    list-style-type: none;
+    list-style-type: decimal 1rem; /*IE 7- hack*/
+    margin: 0;
+    margin-left: 1rem;
+    padding: 0;
+    counter-reset: li-counter;
+    }
+.list-type5 ol li{
+  position: relative;
+  margin-bottom: 1.5em;
+  padding: 0.5em;
+  background-color: #540d66;
+  padding-left: 58px;
+  border-radius: 10px;
+  }
+  
+.list-type5 a{
+  text-decoration:none;
+  color:rgb(250, 245, 245);
+  font-size:15px;
+  font-family: 'Raleway', sans-serif;
+  }
+  
+.list-type5 li:hover{
+  box-shadow:inset -2em 0 #201e1e;
+  -webkit-transition: box-shadow 3.1s; /* For Safari 3.1 to 6.0 */
+  transition: box-shadow 0.5s;
+  }
+  
+.list-type5 ol li:before {
+  position: absolute;
+  top: -0.3em;
+  left: -0.5em;
+  width: 1.8em;
+  height: 1.2em;
+  font-size: 2em;
+  line-height: 1.2;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+  background-color: #6CD6CC;
+  transform: rotate(-20deg);
+  -ms-transform: rotate(-20deg);
+  -webkit-transform: rotate(-20deg);
+  z-index: 99;
+  overflow: hidden;
+  content: counter(li-counter);
+  counter-increment: li-counter;
+  }

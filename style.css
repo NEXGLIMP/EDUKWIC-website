@@ -1,0 +1,42 @@
+*{
+    margin: 0px;
+    padding: 0px;
+   
+}
+body{
+    background-color: black;
+}
+.togbtn{
+    color: white;
+}
+.navb{
+    margin-left: 20px;
+    width: 250px;
+    height: auto;
+}
+.nl{
+    color: white;
+    font-size: 15px;
+}
+.ni{
+    margin: 10px;
+}
+.nn{
+    margin: 30px;
+}
+.topsection{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(images/edukwick-banner.png);
+    height: 700px;
+    width: auto;
+    background-size: cover;
+    background-position: center;
+}
+/* .navlinksec{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
+.searchnsign{
+    float: right;
+    color: white;
+}
