@@ -53,7 +53,7 @@
 	
 </head>
 <body class="ttr-opened-sidebar ttr-pinned-sidebar">
-	
+	<div id="loading-icon-bx"></div>
 	<!-- header start -->
 	<header class="ttr-header">
 		<div class="ttr-header-wrapper">
@@ -352,45 +352,40 @@
 					<li>Get Certified</li>
 				</ul>
 			</div>
-            <div class="cert-head">
+            <!-- <div class="cert-head">
                 <h3 class="text-center">Course Completion Certifate</h3>
                 <p class="text-center">Get certified for courses with above 80% of Completion!!!</p>
+            </div> -->
+           <div class="container">
+            <h3 class="text-center">VERIFY YOUR CERTIFICATE</h3>
+            <p class="text-center">Enter the Certificate ID in your certificate and click on "VERIFY" to verify your certificate</p>
+            <div class="input-form align-items-center">
+            <form class="align-items-center" method="post" action="#">
+                <input type="text" width="100%" placeholder="Enter Certifate ID"><br>
+                <button class="btn btn-primary">VERIFY</button>
+            </form>
             </div>
-          <div class="row">
-            <div class="col-md-4 ">
-                <div class="course1 card">
-                    <!-- <img src="../admin/assets/images/courses/pic1.jpg" class="img-fluid card-img-top"> -->
-
-                    <div class="card-body">
-                        <h4 class="card-title">Python</h4>
-                        <div class="progress">
-                            <div class="progress-bar" style="width:70%">80%</div>
-                          </div>
-                        <a href="#" class="btn btn-primary mt-4">Get Certificate</a>
-                      </div>
-                </div>
-            </div>
-
-            <div class="col-md-4 ">
-                <div class="course1 card">
-                    <!-- <img src="../admin/assets/images/courses/pic1.jpg" class="img-fluid card-img-top"> -->
-
-                    <div class="card-body">
-                        <h4 class="card-title">C++</h4>
-                        <div class="progress">
-                            <div class="progress-bar" style="width:70%">80%</div>
-                          </div>
-                        <a href="#" class="btn btn-primary mt-4">Get Certificate</a>
-                      </div>
-                </div>
-            </div>
-
-          </div>
+           </div>
 
 
         </div>
     </main>	
-    
+    <style>
+        .input-form{
+            text-align: center;
+            margin-top: 20px;
+        }
+        input{
+            height: 32px;
+            width: 350px;
+            margin: 10px;
+            border-radius: 17px;
+            border: 1px solid rgb(85, 23, 184);
+        }
+        input::placeholder{
+            padding-left: 10px;
+        }
+    </style>
 
 
 
