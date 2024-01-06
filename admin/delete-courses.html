@@ -50,6 +50,7 @@
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/dashboard.css">
 	<link class="skin" rel="stylesheet" type="text/css" href="assets/css/color/color-1.css">
+    <link rel="stylesheet" href="courses.css">
 	
 </head>
 <body class="ttr-opened-sidebar ttr-pinned-sidebar">
@@ -311,96 +312,48 @@
 				<h4 class="breadcrumb-title">Admin</h4>
 				<ul class="db-breadcrumb-list">
 					<li><a href="#"><i class="fa fa-home"></i>Home</a></li>
-					<li>User Details</li>
+					<li>Delete Courses</li>
 				</ul>
 			</div>	
             	<!-- Card -->
-                <div class="widget-card widget-bg1">					 
-                    <div class="wc-item">
-                        <h4 class="wc-title">
-                            Total Users
-                        </h4>
-                        <span class="wc-des">
-                            Students
-                        </span>
-                        <span class="wc-stats">
-                            <span class="counter">5000</span> 
-                        </span>		
-                    </div>				      
-                </div>
-                
-                <div class="widget-box">
-                    <div class="wc-title">
-                        <h4>Users List</h4>
+                 <div class="container">
+                    <h3 class="text-center">DELETE COURSES</h4>
+                    <div class="container text-center">
+                        <form action="#" method="post" class="mt-3">
+                        <h4>Enter Course ID :</h3>
+                        <input type="text" required>
+                        <button class="btn">DELETE</button>
+                    </form>
                     </div>
-                    <div class="widget-inner">
-                        <div class="new-user-list">
-                            <ul>
-                                <li>
-                                    <span class="new-users-pic">
-                                        <img src="assets/images/testimonials/pic1.jpg" alt=""/>
-                                    </span>
-                                    <span class="new-users-text">
-                                        <a href="#" class="new-users-name">Anna Strong </a>
-                                        <span class="new-users-info">Visual Designer,Google Inc </span>
-                                    </span>
-                                    <span class="new-users-btn">
-                                        <a href="view-user-details.html" class="btn button-sm outline">VIEW DETAILS</a>
-                                    </span>
-                                </li>
-                                <li>
-                                    <span class="new-users-pic">
-                                        <img src="assets/images/testimonials/pic2.jpg" alt=""/>
-                                    </span>
-                                    <span class="new-users-text">
-                                        <a href="#" class="new-users-name"> Milano Esco </a>
-                                        <span class="new-users-info">Product Designer, Apple Inc </span>
-                                    </span>
-                                    <span class="new-users-btn">
-                                        <a href="view-user-details.html" class="btn button-sm outline">VIEW DETAILS</a>
-                                    </span>
-                                </li>
-                                <li>
-                                    <span class="new-users-pic">
-                                        <img src="assets/images/testimonials/pic1.jpg" alt=""/>
-                                    </span>
-                                    <span class="new-users-text">
-                                        <a href="#" class="new-users-name">Nick Bold  </a>
-                                        <span class="new-users-info">Web Developer, Facebook Inc </span>
-                                    </span>
-                                    <span class="new-users-btn">
-                                        <a href="view-user-details.html" class="btn button-sm outline">VIEW DETAILS</a>
-                                    </span>
-                                </li>
-                                <li>
-                                    <span class="new-users-pic">
-                                        <img src="assets/images/testimonials/pic2.jpg" alt=""/>
-                                    </span>
-                                    <span class="new-users-text">
-                                        <a href="#" class="new-users-name">Wiltor Delton </a>
-                                        <span class="new-users-info">Project Manager, Amazon Inc </span>
-                                    </span>
-                                    <span class="new-users-btn">
-                                        <a href="view-user-details.html" class="btn button-sm outline">VIEW DETAILS</a>
-                                    </span>
-                                </li>
-                                <li>
-                                    <span class="new-users-pic">
-                                        <img src="assets/images/testimonials/pic3.jpg" alt=""/>
-                                    </span>
-                                    <span class="new-users-text">
-                                        <a href="#" class="new-users-name">Nick Stone </a>
-                                        <span class="new-users-info">Project Manager, Amazon Inc  </span>
-                                    </span>
-                                    <span class="new-users-btn">
-                                        <a href="view-user-details.html" class="btn button-sm outline">VIEW DETAILS</a>
-                                    </span>
-                                </li>
-                            </ul>
-                        </div>
+                    <div class="courses-table mt-5">
+                        <table>
+                            <tr>
+                                <th>COURSE ID</th>
+                                <th>COURSE NAME</th>
+                                <th>COURSE IMAGE</th>
+                                <th>COURSE DURATION</th>
+                                <th>TOTAL LECTURES</th>
+                                <th>ACTION</th>
+                            </tr>
+                            <tr>
+                                <td>EKC0001</td>
+                                <td>Python</td>
+                                <td>img.png</td>
+                                <td>5<span>hrs</span></td>
+                                <td>10</td>
+                                <td><a href="#"><button class="btn">DELETE</button></a></td>
+                            </tr>
+                            <tr>
+                                <td>EKC0001</td>
+                                <td>Python</td>
+                                <td>img.png</td>
+                                <td>5<span>hrs</span></td>
+                                <td>10</td>
+                                <td><a href="#"><button class="btn">DELETE</button></a></td>
+                            </tr>
+                        </table>
                     </div>
-                </div>
-			
+                 </div>
 				<!-- Your Profile Views Chart END-->
 			</div>
 		</div>
