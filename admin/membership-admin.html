@@ -284,13 +284,13 @@
 		                </a>
 		            </li>
 					<li>
-						<a href="update-courses.html" class="ttr-material-button">
+						<a href="verify-certificate.html" class="ttr-material-button">
 							<!-- <span class="ttr-icon"><i class="ti-bookmark-alt"></i></span> -->
 		                	<span class="ttr-label">Update Courses</span>
 		                </a>
 		            </li>
                     <li>
-						<a href="delete-courses.html" class="ttr-material-button">
+						<a href="verify-certificate.html" class="ttr-material-button">
 							<!-- <span class="ttr-icon"><i class="ti-bookmark-alt"></i></span> -->
 		                	<span class="ttr-label">Delete Courses</span>
 		                </a>
@@ -312,192 +312,127 @@
 				<h4 class="breadcrumb-title">Admin</h4>
 				<ul class="db-breadcrumb-list">
 					<li><a href="#"><i class="fa fa-home"></i>Home</a></li>
-					<li>Add Course</li>
+					<li>Add Courses</li>
 				</ul>
 			</div>	
-			<div class="row">
-				<!-- Your Profile Views Chart -->
-				<div class="col-lg-12 m-b30">
-					<div class="widget-box">
-						<div class="wc-title">
-							<h4>ADD COURSES</h4>
-						</div>
-						<div class="widget-inner">
-							<form class="edit-profile m-b30" method="post" action="#">
-								<div class="">
-									<div class="form-group row">
-										<div class="col-sm-10  ml-auto">
-											<h3>1.Course Card</h3>
-										</div>
-									</div>
-									<div class="form-group row">
-										<label class="col-sm-2 col-form-label">Enter Course ID:</label>
-										<div class="col-sm-7">
-											<input class="form-control" type="text" name="courseid">
-										</div>
-									</div>
-									<div class="form-group row">
-										<label class="col-sm-2 col-form-label">Course Image:</label>
-										<div class="col-sm-7">
-											<input class="form-control" type="file">
-										</div>
-									</div>
-									<div class="form-group row">
-										<label class="col-sm-2 col-form-label">Course Name</label>
-										<div class="col-sm-7">
-											<input class="form-control" type="text" name="coursename">
-											<!-- <span class="help">If you want your invoices addressed to a company. Leave blank to use your full name.</span> -->
-										</div>
-									</div>
-									<div class="form-group row">
-										<label class="col-sm-2 col-form-label">Course Category</label>
-										<div class="col-sm-7">
-											<input class="form-control" type="text" name="coursecat">
-										</div>
-									</div>
-									<div class="form-group row">
-										<label class="col-sm-2 col-form-label">Course Duration</label>
-										<div class="col-sm-7">
-											<input class="form-control" type="number" name="coursecat">
-										</div>
-									</div>
-                                    <div class="form-group row">
-										<label class="col-sm-2 col-form-label">Total Lectures</label>
-										<div class="col-sm-7">
-											<input class="form-control" type="number" name="coursecat">
-										</div>
-									</div>
-									<div class="seperator"></div>
-									
-									<div class="form-group row">
-										<div class="col-sm-10 ml-auto">
-											<h3>2. Course Details</h3>
-										</div>
-									</div>
-									<div class="form-group row">
-										<label class="col-sm-2 col-form-label">Overview</label>
-										<div class="col-sm-7">
-											<input class="form-control" type="text" name="c-overview">
-										</div>
-									</div>
-									<div class="form-group row">
-										<label class="col-sm-2 col-form-label">Description</label>
-										<div class="col-sm-7">
-											<input class="form-control" type="text" name="c-desc">
-										</div>
-									</div>
-                                    <div class="form-group row">
-										<label class="col-sm-2 col-form-label">Lectures</label>
-										<div class="col-sm-7">
-											<input class="form-control" type="number" name="c-overview">
-										</div>
-									</div>
-									<div class="form-group row">
-										<label class="col-sm-2 col-form-label">Duration</label>
-										<div class="col-sm-7">
-											<input class="form-control" type="number" name="c-desc">
-										</div>
-									</div>
-									<div class="form-group row">
-										<label class="col-sm-2 col-form-label">Quizes</label>
-										<div class="col-sm-7">
-											<input class="form-control" type="number" name="C-quiz">
-										</div>
-									</div>
-									<div class="form-group row">
-										<label class="col-sm-2 col-form-label">Skill Level</label>
-										<div class="col-sm-7">
-											<input class="form-control" type="text" name="c-skill">
-										</div>
-									</div>
-                                    <div class="form-group row">
-										<label class="col-sm-2 col-form-label">Language</label>
-										<div class="col-sm-7">
-											<input class="form-control" type="text" name="c-lang">
-										</div>
-									</div>
-
-									<div class="m-form__seperator m-form__seperator--dashed m-form__seperator--space-2x"></div>
-								</div>
-									<div class="form-group row">
-										<div class="col-sm-10 ml-auto">
-											<h3 class="m-form__section">3. Syllabus</h3>
-										</div>
-									</div>
-									<div id="moduleContainer">
-										<div class="module">
-									<div class="form-group row" >
-										<label class="col-sm-2 col-form-label">MODULE</label>
-										<div class="col-sm-7">
-											<input class="form-control" name="module_name[]" type="text" >
-										</div>
-									</div>
-
-									<div class="form-group row" >
-										<label class="col-sm-2 col-form-label">MODULE DURATION</label>
-										<div class="col-sm-7">
-											<input class="form-control" name="module_duration[]" type="text" >
-										</div>
-									</div>
-                                    
-
-									<div class="form-group row">
-										<label class="col-sm-2 col-form-label">SECTION</label>
-										<div class="col-sm-7">
-											<input class="form-control" name="module_descriptions[0][]" type="text" >
-											<!-- <input class="form-control" name="section_name[0][]" type="text" > -->
-
-										</div>
-										<input type="button" class="btn" onclick="addDescription(0)" value="ADD SECTION">
-									</div>
-									<div class="form-group row">
-										<label class="col-sm-2 col-form-label">SECTION DURATION</label>
-										<div class="col-sm-7">
-											<!-- <input class="form-control" name="module_descriptions[0][]" type="text" > -->
-											<input class="form-control" name="section_time[0][]" type="text" >
-
-										</div>
-										<!-- <input type="button" class="btn" onclick="addDescription(0)" value="ADD SECTION"> -->
-									</div>
-
-									<div class="form-group row">
-										<label class="col-sm-2 col-form-label">SECTION LINK</label>
-										<div class="col-sm-7">
-											<input class="form-control" name="section_link[0][]" type="text" >
-
-										</div>
-									</div>
-                                    
-									<!-- <div class="form-group row">
-										<label class="col-sm-2 col-form-label">SECTION DURATION</label>
-										<div class="col-sm-7">
-											<input class="form-control" name="module_descriptions[0][]" type="text" >
-										</div>
-										<input type="button" class="btn" onclick="addDescription(0)" value="ADD SECTION">
-									</div> -->
-									
-										</div>
-									</div>
-								<!-- </div> -->
-								<div class="">
-									<div class="">
-										<div class="row">
-											<div class="col-sm-2">
-											</div>
-											<div class="col-sm-7">
-												<input type="button" class="btn mt-3" onclick="addModule()" value="ADD MODULE">
-												<!-- <button type="reset" class="btn-secondry">Cancel</button> -->
-											</div>
-										</div>
-									</div>
-								</div>
-							</form>
-							<div class="add-course-btn mt-3"style="text-align: center;">
-								<button class="btn" type="submit" >ADD COURSE</button>
-							</div>
-						</div>
-					</div>
-				</div>
+            	<!-- Card -->
+                 <div class="container">
+                    <h4 class="text-center">CURRENT MEMBERSHIP PLANS</h4>
+                    <div class="row">
+                        <div class="col-sm-3">
+                        <div class="course1 card">    
+                            <div class="card-body">
+                                <!-- <h4 class="card-title">PLAN: <span style="color: rgb(99, 24, 170);">MEDIUM</span></h4> -->
+                                <div class="pricingtable-wrapper">
+                                    <div class="pricingtable-inner">
+                                        <div class="pricingtable-main"> 
+                                            <div class="pricingtable-price"> 
+                                                <!-- <span class="priceing-doller">₹</span> -->
+                                                <span style="color: white; font-size: 30px;">₹399</span><br>
+                                                <span class="pricingtable-type">Month</span>
+                                            </div>
+                                            <div class="pricingtable-title">
+                                                <h2>BASIC</h2><br>
+                                   
+    
+                                                <!-- <p>We are just getting started</p> -->
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                                <div class="text-center">
+                                <a href="#" class="btn btn-primary mt-4">UPDATE PLAN</a>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="course1 card">    
+                            <div class="card-body">
+                                <!-- <h4 class="card-title">PLAN: <span style="color: rgb(99, 24, 170);">MEDIUM</span></h4> -->
+                                <div class="pricingtable-wrapper">
+                                    <div class="pricingtable-inner">
+                                        <div class="pricingtable-main"> 
+                                            <div class="pricingtable-price"> 
+                                                <!-- <span class="priceing-doller">₹</span> -->
+                                                <span style="color: white; font-size: 30px;">₹999</span><br>
+                                                <span class="pricingtable-type">3 Month</span>
+                                            </div>
+                                            <div class="pricingtable-title">
+                                                <h2>MEDIUM</h2><br>
+                                   
+    
+                                                <!-- <p>We are just getting started</p> -->
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                                <div class="text-center">
+                                <a href="#" class="btn btn-primary mt-4">UPDATE PLAN</a>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="course1 card">    
+                            <div class="card-body">
+                                <!-- <h4 class="card-title">PLAN: <span style="color: rgb(99, 24, 170);">MEDIUM</span></h4> -->
+                                <div class="pricingtable-wrapper">
+                                    <div class="pricingtable-inner">
+                                        <div class="pricingtable-main"> 
+                                            <div class="pricingtable-price"> 
+                                                <!-- <span class="priceing-doller">₹</span> -->
+                                                <span style="color: white; font-size: 30px;">₹1499</span><br>
+                                                <span class="pricingtable-type">6 Month</span>
+                                            </div>
+                                            <div class="pricingtable-title">
+                                                <h2>ADVANCE</h2><br>
+                                   
+    
+                                                <!-- <p>We are just getting started</p> -->
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                                <div class="text-center">
+                                <a href="#" class="btn btn-primary mt-4">UPDATE PLAN</a>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="course1 card">    
+                            <div class="card-body">
+                                <!-- <h4 class="card-title">PLAN: <span style="color: rgb(99, 24, 170);">MEDIUM</span></h4> -->
+                                <div class="pricingtable-wrapper">
+                                    <div class="pricingtable-inner">
+                                        <div class="pricingtable-main"> 
+                                            <div class="pricingtable-price"> 
+                                                <!-- <span class="priceing-doller">₹</span> -->
+                                                <span style="color: white; font-size: 30px;">₹2499</span><br>
+                                                <span class="pricingtable-type">3 Month</span>
+                                            </div>
+                                            <div class="pricingtable-title">
+                                                <h2>PRO</h2><br>
+                                   
+    
+                                                <!-- <p>We are just getting started</p> -->
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                                <div class="text-center">
+                                <a href="#" class="btn btn-primary mt-4">UPDATE PLAN</a>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                 </div>
 				<!-- Your Profile Views Chart END-->
 			</div>
 		</div>
@@ -505,7 +440,6 @@
 	<div class="ttr-overlay"></div>
 
 <!-- External JavaScripts -->
-<script src="course-modules.js"></script>
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/vendors/bootstrap/js/popper.min.js"></script>
 <script src="assets/vendors/bootstrap/js/bootstrap.min.js"></script>
