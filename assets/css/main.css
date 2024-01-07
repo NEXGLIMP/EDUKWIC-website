@@ -239,9 +239,9 @@
   transform: translateZ(-2px);
 }
 .pricing h4 {
-  font-size: 48px;
+  font-size: 43px;
   color: var(--color-secondary);
-  font-weight: 500;
+  font-weight: 420;
   font-family: var(--font-secondary);
   margin-bottom: 0;
   text-align: center;
@@ -249,9 +249,12 @@
 }
 
 .pricing h4 sup {
-  font-size: 28px;
+  font-size: 24px;
 }
-
+#pricing-month{
+  font-weight: 60;
+  font-size: 16px;
+}
 .pricing h4 span {
   color: rgba(108, 117, 125, 0.8);
   font-size: 18px;
