@@ -1,3 +1,14 @@
+<?php
+session_start();
+
+if(isset($_SESSION['auth']))
+{
+    // $_SESSION['message'] = "You are already logged in!";
+    header('Location: index.php');
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -67,7 +78,25 @@
 		<div class="account-head" style="background-image:url(assets/images/background/bg2.jpg);">
 			<a href="index.html"><img src="assets/images/ek-logo-removebg.png" alt=""></a>
 		</div>
+        
 		<div class="account-form-inner">
+            <div class="container">
+                <?php
+                if(isset($_SESSION['message']))
+                {
+                    ?>
+                <div class="alert alert-warning alert-dismissable fade show " role="alert">
+                  <strong>Hey!</strong> <?= $_SESSION['message']; ?>
+                  <!-- <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button> -->
+
+                </div>
+
+
+                <?php
+                unset($_SESSION['message']);
+                }
+                ?>
+            </div>
 			<div class="account-container">
 				<div class="heading-bx left">
 					<h2 class="title-head">Login to your <span>Account</span></h2>
@@ -132,6 +161,9 @@
 <script src="assets/js/functions.js"></script>
 <script src="assets/js/contact.js"></script>
 <script src='assets/vendors/switcher/switcher.js'></script>
+
+<script>document.addEventListener('contextmenu', event => event.stopPropagation(), true);</script>
+
 </body>
 
 </html>

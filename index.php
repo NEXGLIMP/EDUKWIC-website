@@ -1,3 +1,7 @@
+<?php
+     session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -82,6 +86,7 @@
 <div id="loading-icon-bx"></div>
 	<!-- Header Top ==== -->
     <div id="header"></div>
+ 
 <!-- Header Top END ==== -->
     <!-- Content -->
     <div class="page-content bg-white">

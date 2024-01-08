@@ -1,7 +1,7 @@
 // Load header and footer dynamically
 document.addEventListener('DOMContentLoaded', function () {
     // Load header
-    fetch('header.html')
+    fetch('header.php')
         .then(response => response.text())
         .then(data => {
             document.getElementById('header').innerHTML = data;
