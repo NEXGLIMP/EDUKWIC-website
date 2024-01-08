@@ -27,7 +27,7 @@ if (isset($_POST['login_btn'])) {
     ];
     $_SESSION['role_as'] = $role_as;
     if($role_as == 1){
-      header('Location: ../admin/admin-dashboard.html');
+      header('Location: ../ekadmin/index.php');
     }
     else{
     // $_SESSION['message'] = "Logged In Successfully";
