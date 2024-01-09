@@ -1,5 +1,5 @@
 <?php
-session_start();
+  session_start();
 if(isset($_SESSION['auth'])){
     if($_SESSION['role_as'] != 1)
 {
