@@ -388,6 +388,12 @@
 				</div>
 			</div>
 			<!--certificate sesction end-->
+
+			<!-- associated section -->
+			<div class="container">
+				<p class="text-center" style="font-size:35px;"><strong>Associated with</strong><a href="#"><img src="assets/images/nxg-removed-bg.png" alt="" width="450px"></a></p>
+			</div>
+
 			<!-- Testimonials -->
 			<div class="section-area section-sp2 bg-fix ovbl-dark" style="background-image:url(assets/images/background/bg1.jpg);">
                 <div class="container">
