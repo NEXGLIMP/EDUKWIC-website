@@ -1,7 +1,11 @@
 <?php
      session_start();
 ?>
-
+<?php
+  require_once 'db_conn.php';
+  $sql = "SELECT*FROM course_details";
+  $all_course_details = $conn->query($sql);
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -183,19 +187,21 @@
 					</div>
 					<div class="row">
 					<div class="courses-carousel owl-carousel owl-btn-1 col-12 p-lr0">
+					<?php
+						while($row = mysqli_fetch_assoc($all_course_details)){
+					?>
 						<div class="item">
 							<div class="cours-bx">
 								<div class="action-box">
-									<img src="assets/images/courses/pic1.jpg" alt="">
-									<a href="#" class="btn rounded-right">Read More</a>
+									<img src="<?php echo $row["image_src"] ?>" alt="">
+									<a href="<?php echo $row["anchor_tag"] ?>" class="btn rounded-right">Read More</a>
 								</div>
 								<div class="info-bx text-center">
-									<h5><a href="#">Introduction to Programming</a></h5>
-									<span>Programming</span>
+									<h5><a href="<?php echo $row["anchor_tag"] ?>"><?php echo $row["course_title"] ?></a></h5>
+									<span><?php echo $row["course_branch"] ?></span>
 								</div>
 								<div class="cours-more-info">
 									<div class="review">
-										<span>3 Review</span>
 										<ul class="cours-star">
 											<li class="active"><i class="fa fa-star"></i></li>
 											<li class="active"><i class="fa fa-star"></i></li>
@@ -205,97 +211,15 @@
 										</ul>
 									</div>
 									<div class="price">
-										<del>₹190</del>
-										<h5>₹120</h5>
+										<a href="<?php echo $row["video_src"] ?>" class="bi bi-play-circle"></a>
 									</div>
 								</div>
 							</div>
 						</div>
-						<div class="item">
-							<div class="cours-bx">
-								<div class="action-box">
-									<img src="assets/images/courses/pic2.jpg" alt="">
-									<a href="#" class="btn rounded-right">Read More</a>
-								</div>
-								<div class="info-bx text-center">
-									<h5><a href="#">Full-Stack Development</a></h5>
-									<span>Programming</span>
-								</div>
-								<div class="cours-more-info">
-									<div class="review">
-										<span>3 Review</span>
-										<ul class="cours-star">
-											<li class="active"><i class="fa fa-star"></i></li>
-											<li class="active"><i class="fa fa-star"></i></li>
-											<li class="active"><i class="fa fa-star"></i></li>
-											<li><i class="fa fa-star"></i></li>
-											<li><i class="fa fa-star"></i></li>
-										</ul>
-									</div>
-									<div class="price">
-										<del>₹190</del>
-										<h5>₹120</h5>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="item">
-							<div class="cours-bx">
-								<div class="action-box">
-									<img src="assets/images/courses/pic3.jpg" alt="">
-									<a href="#" class="btn rounded-right">Read More</a>
-								</div>
-								<div class="info-bx text-center">
-									<h5><a href="#">Cybersecurity</a></h5>
-									<span>Programming</span>
-								</div>
-								<div class="cours-more-info">
-									<div class="review">
-										<span>3 Review</span>
-										<ul class="cours-star">
-											<li class="active"><i class="fa fa-star"></i></li>
-											<li class="active"><i class="fa fa-star"></i></li>
-											<li class="active"><i class="fa fa-star"></i></li>
-											<li><i class="fa fa-star"></i></li>
-											<li><i class="fa fa-star"></i></li>
-										</ul>
-									</div>
-									<div class="price">
-										<del>₹190</del>
-										<h5>₹120</h5>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="item">
-							<div class="cours-bx">
-								<div class="action-box">
-									<img src="assets/images/courses/pic4.jpg" alt="">
-									<a href="#" class="btn rounded-right">Read More</a>
-								</div>
-								<div class="info-bx text-center">
-									<h5><a href="#">Game Development</a></h5>
-									<span>Programming</span>
-								</div>
-								<div class="cours-more-info">
-									<div class="review">
-										<span>3 Review</span>
-										<ul class="cours-star">
-											<li class="active"><i class="fa fa-star"></i></li>
-											<li class="active"><i class="fa fa-star"></i></li>
-											<li class="active"><i class="fa fa-star"></i></li>
-											<li><i class="fa fa-star"></i></li>
-											<li><i class="fa fa-star"></i></li>
-										</ul>
-									</div>
-									<div class="price">
-										<del>₹190</del>
-										<h5>₹120</h5>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
+					<?php
+					}
+					?>
+				 </div>
 					</div>
 				</div>
 				<div class="text-center">
