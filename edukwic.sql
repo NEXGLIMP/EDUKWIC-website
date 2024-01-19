@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 13, 2024 at 06:46 AM
+-- Generation Time: Jan 19, 2024 at 08:10 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -59,6 +59,7 @@ CREATE TABLE `users` (
   `user_phone` int(11) NOT NULL,
   `user_password` varchar(50) NOT NULL,
   `role_as` tinyint(4) NOT NULL DEFAULT 0,
+  `verify_token` varchar(50) NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -66,9 +67,9 @@ CREATE TABLE `users` (
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`user_id`, `user_name`, `user_email`, `user_phone`, `user_password`, `role_as`, `created_at`) VALUES
-(1, 'admin', 'edukwicorg@gmail.com', 0, '1234', 1, '2024-01-07 09:34:22'),
-(2, 'Student', 'student@gmail.com', 0, '123', 0, '2024-01-08 02:45:46');
+INSERT INTO `users` (`user_id`, `user_name`, `user_email`, `user_phone`, `user_password`, `role_as`, `verify_token`, `created_at`) VALUES
+(1, 'admin', 'edukwicorg@gmail.com', 0, '1234', 1, '', '2024-01-07 09:34:22'),
+(2, 'Student', 'student@gmail.com', 0, '123', 0, '00jfwehaw93uhh73', '2024-01-08 02:45:46');
 
 --
 -- Indexes for dumped tables
