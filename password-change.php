@@ -60,18 +60,18 @@ if(isset($_POST['resetbtn']))
        {
          send_password_reset($get_name,$get_email,$token);
         //  $_SESSION['status'] = "We emailed you a password reset link";
-         header("Location: forget-password.php");
+         header("Location: forgot-password.php");
         exit(0);
        }
        else{
         // $_SESSION['status'] = "Something went wrong #1";
-    header("Location: forget-password.php");
+    header("Location: forgot-password.php");
     exit(0);
        }
    }
  else{
     // $_SESSION['status'] = "No Email Found";
-    header("Location: forget-password.php");
+    header("Location: forgot-password.php");
     exit(0);
    }
 }
