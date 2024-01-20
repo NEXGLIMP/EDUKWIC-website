@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 20, 2024 at 11:11 AM
+-- Generation Time: Jan 20, 2024 at 02:47 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -70,7 +70,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`user_id`, `user_name`, `user_email`, `user_phone`, `user_password`, `role_as`, `verify_token`, `reset_token_hash`, `reset_token_expires_at`, `created_at`) VALUES
-(1, 'admin', 'edukwicorg@gmail.com', 0, '1234', 1, 'jnerc7nf53n889', '89c31b6f60c1fd693cf3a829a1dda0dfaa084f046e5a92c83b1c2546fab66a3e', '2024-01-20 11:37:55', '2024-01-07 09:34:22'),
+(1, 'admin', 'edukwicorg@gmail.com', 0, '$2y$10$xBjzf.S85jJEhNk6pijpWuVNkOqBwKAcQC4ybXZZYJc', 1, 'jnerc7nf53n889', NULL, NULL, '2024-01-07 09:34:22'),
 (2, 'Student', 'student@gmail.com', 0, '123', 0, '00jfwehaw93uhh73', NULL, NULL, '2024-01-08 02:45:46');
 
 --
