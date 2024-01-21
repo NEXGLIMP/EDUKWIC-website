@@ -1,3 +1,33 @@
+<?php
+
+$token = $_GET["token"];
+
+$token_hash = hash("sha256", $token);
+
+$mysqli = new mysqli("localhost", "root", "", "edukwic");
+
+$sql = "SELECT * FROM users
+        WHERE reset_token_hash = ?";
+
+$stmt = $mysqli->prepare($sql);
+
+$stmt->bind_param("s", $token_hash);
+
+$stmt->execute();
+
+$result = $stmt->get_result();
+
+$user = $result->fetch_assoc();
+
+if ($user === null) {
+    die("token not found");
+}
+
+if (strtotime($user["reset_token_expires_at"]) <= time()) {
+    die("token has expired");
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -65,26 +95,35 @@
 	<div id="loading-icon-bx"></div>
 	<div class="account-form">
 		<div class="account-head" style="background-image:url(assets/images/background/bg2.jpg);">
-			<a href="index.html"><img src="assets/images/ek-logo-removebg.png" alt=""></a>
+			<a href="index.php"><img src="assets/images/ek-logo-removebg.png" alt=""></a>
 		</div>
 		<div class="account-form-inner">
+            
 			<div class="account-container">
 				<div class="heading-bx left">
-					<h2 class="title-head">Forget <span>Password</span></h2>
+					<h2 class="title-head">Reset <span>Password</span></h2>
 					<p>Login Your Account <a href="login.html">Click here</a></p>
 				</div>	
-				<form class="contact-bx" action="password-change.php" method="post">
+				<form class="contact-bx" action="process-reset-password.php" method="post">
 					<div class="row placeani">
 						<div class="col-lg-12">
 							<div class="form-group">
+                            <input type="hidden" name="token" value="<?= htmlspecialchars($token) ?>">
 								<div class="input-group">
-									<label>Your Email Address</label>
-									<input name="umail" type="email" required="" class="form-control">
+									<label>New Password</label>
+									<input name="password" type="password" required="" class="form-control">
+								</div>
+                               
+							</div>
+                            <div class="form-group">
+								<div class="input-group">
+                                <label>Confirm Password</label>
+									<input name="password_confirmation" type="password" required="" class="form-control">
 								</div>
 							</div>
 						</div>
 						<div class="col-lg-12 m-b30">
-							<button name="submit" type="submit" name="resetbtn" value="Submit" class="btn button-md">Submit</button>
+							<button name="submit" type="submit" name="pass-resetbtn" value="Submit" class="btn button-md">Submit</button>
 						</div>
 					</div>
 				</form>

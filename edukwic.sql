@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 13, 2024 at 06:46 AM
+-- Generation Time: Jan 20, 2024 at 02:47 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -59,6 +59,9 @@ CREATE TABLE `users` (
   `user_phone` int(11) NOT NULL,
   `user_password` varchar(50) NOT NULL,
   `role_as` tinyint(4) NOT NULL DEFAULT 0,
+  `verify_token` varchar(50) NOT NULL,
+  `reset_token_hash` varchar(64) DEFAULT NULL,
+  `reset_token_expires_at` datetime DEFAULT NULL,
   `created_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -66,9 +69,9 @@ CREATE TABLE `users` (
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`user_id`, `user_name`, `user_email`, `user_phone`, `user_password`, `role_as`, `created_at`) VALUES
-(1, 'admin', 'edukwicorg@gmail.com', 0, '1234', 1, '2024-01-07 09:34:22'),
-(2, 'Student', 'student@gmail.com', 0, '123', 0, '2024-01-08 02:45:46');
+INSERT INTO `users` (`user_id`, `user_name`, `user_email`, `user_phone`, `user_password`, `role_as`, `verify_token`, `reset_token_hash`, `reset_token_expires_at`, `created_at`) VALUES
+(1, 'admin', 'edukwicorg@gmail.com', 0, '$2y$10$xBjzf.S85jJEhNk6pijpWuVNkOqBwKAcQC4ybXZZYJc', 1, 'jnerc7nf53n889', NULL, NULL, '2024-01-07 09:34:22'),
+(2, 'Student', 'student@gmail.com', 0, '123', 0, '00jfwehaw93uhh73', NULL, NULL, '2024-01-08 02:45:46');
 
 --
 -- Indexes for dumped tables
@@ -85,7 +88,8 @@ ALTER TABLE `course_details`
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
-  ADD PRIMARY KEY (`user_id`);
+  ADD PRIMARY KEY (`user_id`),
+  ADD UNIQUE KEY `reset_token_hash` (`reset_token_hash`);
 
 --
 -- AUTO_INCREMENT for dumped tables

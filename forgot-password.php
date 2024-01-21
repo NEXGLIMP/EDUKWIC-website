@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -65,15 +68,16 @@
 	<div id="loading-icon-bx"></div>
 	<div class="account-form">
 		<div class="account-head" style="background-image:url(assets/images/background/bg2.jpg);">
-			<a href="index.html"><img src="assets/images/ek-logo-removebg.png" alt=""></a>
+			<a href="index.php"><img src="assets/images/ek-logo-removebg.png" alt=""></a>
 		</div>
 		<div class="account-form-inner">
+            
 			<div class="account-container">
 				<div class="heading-bx left">
 					<h2 class="title-head">Forget <span>Password</span></h2>
-					<p>Login Your Account <a href="login.html">Click here</a></p>
+					<p>Login Your Account <a href="login.php">Click here</a></p>
 				</div>	
-				<form class="contact-bx" action="password-change.php" method="post">
+				<form class="contact-bx" action="send-password-reset.php" method="post">
 					<div class="row placeani">
 						<div class="col-lg-12">
 							<div class="form-group">
