@@ -210,8 +210,13 @@
 											<li><i class="fa fa-star"></i></li>
 										</ul>
 									</div>
-									<div class="price">
+									<div class="row">
+										<div class="col-6">
+										<p class="text-mute text-nowrap">1h 21min</p>
+										</div>
+										<div class="col-2">
 										<a href="<?php echo $row["video_src"] ?>" class="bi bi-play-circle"></a>
+										</div>
 									</div>
 								</div>
 							</div>
