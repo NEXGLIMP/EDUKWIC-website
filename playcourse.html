@@ -35,9 +35,6 @@
 
 
 
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
 	
 	<!--[if lt IE 9]>
 	<script src="assets/js/html5shiv.min.js"></script>
@@ -89,15 +86,18 @@
 		<!-- Breadcrumb row END -->
         <!-- inner page banner END -->
 
-
-        <main class="container2">
+<!-- 
+        <main class="container">
+			<div class="row">
+				<div class="col-sm-8">
             <section class="main-video">
-                <div class="container">
+                <div class="container mt-4">
                 <video src="https://www.youtube.com/watch?v=b5mGe608DZ4" controls autoplay muted></video>
             </div>
                 <h3 class="title">Title of the playing Video.</h3>
             </section>
-    
+		</div>
+		<div class="col-sm-4">
             <section class="video-playlist">
                 <h3 class="title">Title of Video Playlist</h3>
                 <p>10 lessions &nbsp; . &nbsp; 50m 48s</p>
@@ -105,11 +105,36 @@
     
                 </div>
             </section>
-        </main>
+		</div>
 
+		</div>
+        </main> -->
 
-
-
+		<main class="container">
+			<div class="row">
+				<!-- Left Column: Video Player -->
+				<div class="col-sm-8">
+				
+						<div class="container vid-play mt-4">
+							<video id="courseVideo" controls autoplay muted></video>
+						</div>
+						
+				</div>
+				
+				<!-- Right Column: Course Syllabus -->
+				<div class="col-sm-4">
+					<section class="video-playlist">
+						<h3 class="title mt-3">Course Syllabus</h3>
+						<!-- Add your course titles and corresponding video URLs here -->
+						<div id="courseSyllabus">
+							<a href="https://www.youtube.com/watch?v=b5mGe608DZ4" data-video-url="https://www.youtube.com/watch?v=b5mGe608DZ4" class="syllabus-item">Title of Video 1</a>
+							<!-- Add more entries as needed -->
+						</div>
+					</section>
+				</div>
+			</div>
+		</main>
+		
 
 
     <!-- Content END-->
@@ -119,7 +144,30 @@
     <button class="back-to-top fa fa-chevron-up" ></button>
 </div>
 <!-- External JavaScripts -->
-<script src="script.js"></script>
+<!-- <script src="script.js"></script> -->
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Get references to video and title elements
+        const courseVideo = document.getElementById('courseVideo');
+        const videoTitle = document.getElementById('videoTitle');
+
+        // Get reference to course syllabus container
+        const courseSyllabus = document.getElementById('courseSyllabus');
+
+        // Add click event listener to each syllabus item
+        courseSyllabus.addEventListener('click', function (event) {
+            if (event.target.classList.contains('syllabus-item')) {
+                // Prevent default behavior of anchor tag
+                event.preventDefault();
+
+                // Set video source and title based on clicked syllabus item
+                const videoUrl = event.target.getAttribute('data-video-url');
+                courseVideo.src = videoUrl;
+                videoTitle.textContent = event.target.textContent;
+            }
+        });
+    });
+</script>
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/vendors/bootstrap/js/popper.min.js"></script>
 <script src="assets/vendors/bootstrap/js/bootstrap.min.js"></script>
